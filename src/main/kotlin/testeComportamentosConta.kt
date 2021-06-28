@@ -1,11 +1,11 @@
 fun testeComportamentosConta() {
 
-    val contaAlex = Conta(titular = "Alex", numeroConta = 1000)
+    val contaAlex = ContaPoupanca(titular = "Alex", numeroConta = 1000)
     println(contaAlex.titular)
     println(contaAlex.numeroConta)
     println(contaAlex.saldo)
 
-    val contaFran = Conta(titular = "Fran", numeroConta = 1001)
+    val contaFran = ContaCorrente(titular = "Fran", numeroConta = 1001)
     println(contaFran.titular)
     println(contaFran.numeroConta)
     println(contaFran.saldo)
