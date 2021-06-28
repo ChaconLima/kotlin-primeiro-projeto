@@ -1,6 +1,8 @@
-fun testaLacosDecrecente() {
-    for (i in 10 downTo 1 step 2) {
+package br.com.alura.mateuschacon.teste
 
+fun testaLacosCrescente() {
+    var i = 0
+    while (i < 5) {
         val titular: String = "Mateus $i"
         val numeroConta: Int = 1234 + i
         var saldo: Double = i + 10.0
@@ -11,5 +13,6 @@ fun testaLacosDecrecente() {
 
         testaCondicoes(saldo)
         println("\n")
+        i++
     }
 }

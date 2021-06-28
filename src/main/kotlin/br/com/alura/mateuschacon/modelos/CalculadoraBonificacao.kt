@@ -1,3 +1,5 @@
+package br.com.alura.mateuschacon.modelos
+
 class CalculadoraBonificacao {
 
     var total: Double = 0.0

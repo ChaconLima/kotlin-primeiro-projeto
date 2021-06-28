@@ -1,3 +1,5 @@
+package br.com.alura.mateuschacon.modelos
+
 abstract class Conta(
     val titular: String,
     val numeroConta: Int

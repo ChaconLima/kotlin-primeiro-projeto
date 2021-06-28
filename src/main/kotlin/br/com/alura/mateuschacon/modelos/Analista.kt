@@ -1,3 +1,5 @@
+package br.com.alura.mateuschacon.modelos
+
 class Analista(
     nome: String,
     cpf: String,

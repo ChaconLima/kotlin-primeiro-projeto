@@ -1,3 +1,5 @@
+package br.com.alura.mateuschacon.modelos
+
 class SistemaInterno {
 
     fun entra(admin: Autenticalvel, senha: Int) {

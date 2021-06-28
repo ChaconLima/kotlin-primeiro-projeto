@@ -1,3 +1,7 @@
+package br.com.alura.mateuschacon.teste
+
+import br.com.alura.mateuschacon.modelos.*
+
 fun testaFuncionario() {
     val alex = Analista(nome = "Alex", cpf = "111-111-111-11", salario = 1000.0)
 

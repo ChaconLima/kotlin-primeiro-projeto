@@ -1,3 +1,5 @@
+package br.com.alura.mateuschacon.modelos
+
 abstract class FuncionarioAdmin(
     nome: String,
     cpf: String,

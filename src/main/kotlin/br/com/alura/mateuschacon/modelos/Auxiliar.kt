@@ -1,3 +1,5 @@
+package br.com.alura.mateuschacon.modelos
+
 class Auxiliar(
     nome: String,
     cpf: String,

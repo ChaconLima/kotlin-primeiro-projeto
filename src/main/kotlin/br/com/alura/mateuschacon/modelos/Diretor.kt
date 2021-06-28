@@ -1,3 +1,5 @@
+package br.com.alura.mateuschacon.modelos
+
 class Diretor(
     nome: String,
     cpf: String,
