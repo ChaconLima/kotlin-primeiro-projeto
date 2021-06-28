@@ -4,8 +4,5 @@ abstract class Funcionario(
     val salario: Double,
 ) {
 
-    open val bonificao: Double
-        get() {
-            return this.salario * 0.1
-        }
+      abstract val bonificao: Double
 }
