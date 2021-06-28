@@ -11,5 +11,4 @@ class Gerente(
             return this.salario
         }
 
-
 }

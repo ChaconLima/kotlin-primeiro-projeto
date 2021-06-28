@@ -5,7 +5,7 @@ class Diretor(
     senha: Int,
     val plr: Double
 
-) : FuncionarioAdmin(nome = nome, cpf = cpf, salario = salario, senha = senha) {
+) : FuncionarioAdmin(nome = nome, cpf = cpf, salario = salario, senha = senha){
 
     override val bonificao: Double
         get() {
