@@ -33,11 +33,19 @@ fun main() {
     }
 
     println("-----------------------------")
+
+    val maria = Analista(nome = "Maria", cpf = "444-444-444-44", salario = 1500.0)
+
+    println( "\n nome: ${maria.nome} \n cpf: ${maria.cpf} \n salário: ${maria.salario}")
+    println("\n Bonificação: ${maria.bonificao}")
+
+    println("-----------------------------")
     val calculadora = CalculadoraBonificacao()
 
     calculadora.registra(alex)
     calculadora.registra(fran)
     calculadora.registra(gabi)
+    calculadora.registra(maria)
     println(" total de bonificação  : ${calculadora.total}")
 
 
