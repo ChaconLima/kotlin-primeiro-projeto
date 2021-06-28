@@ -1,7 +1,7 @@
 package br.com.alura.mateuschacon.modelos
 
 class ContaPoupanca(
-    titular: String,
+    titular: Cliente,
     numeroConta: Int
 ) : Conta( titular = titular, numeroConta = numeroConta) {
 

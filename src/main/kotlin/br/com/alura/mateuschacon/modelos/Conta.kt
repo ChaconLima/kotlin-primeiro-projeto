@@ -1,7 +1,7 @@
 package br.com.alura.mateuschacon.modelos
 
 abstract class Conta(
-    val titular: String,
+    val titular: Cliente,
     val numeroConta: Int
 ) {
 

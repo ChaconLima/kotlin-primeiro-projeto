@@ -1,17 +1,21 @@
 package br.com.alura.mateuschacon.teste
 
+import br.com.alura.mateuschacon.modelos.Cliente
 import br.com.alura.mateuschacon.modelos.ContaCorrente
 import br.com.alura.mateuschacon.modelos.ContaPoupanca
 
 fun testeComportamentosConta() {
 
-    val contaAlex = ContaPoupanca(titular = "Alex", numeroConta = 1000)
-    println(contaAlex.titular)
+    println("-------------------------------")
+    val alex = Cliente(nome = "Alex", cpf = "123", senha = 1234)
+    val contaAlex = ContaPoupanca(titular =alex, numeroConta = 1000)
+    println(contaAlex.titular.nome)
     println(contaAlex.numeroConta)
     println(contaAlex.saldo)
 
-    val contaFran = ContaCorrente(titular = "Fran", numeroConta = 1001)
-    println(contaFran.titular)
+    val fran = Cliente(nome = "Fran", cpf = "123", senha = 1234)
+    val contaFran = ContaCorrente(titular = fran, numeroConta = 1001)
+    println(contaFran.titular.nome)
     println(contaFran.numeroConta)
     println(contaFran.saldo)
 
@@ -37,7 +41,7 @@ fun testeComportamentosConta() {
 
     println("-------------------------------")
 
-    println("Transferencia da br.com.alura.mateuschacon.modelos.Conta da Fran para o Alex")
+    println("Transferencia da Conta da Fran para o Alex")
 
     if (contaFran.transfere(valor = 1800.0, destino = contaAlex)) {
         println("Transferencia sucedida")
