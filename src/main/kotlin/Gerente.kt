@@ -1,14 +1,15 @@
 class Gerente(
-    val nome: String,
-    val cpf: String,
-    val salario: Double,
+    nome: String,
+    cpf: String,
+    salario: Double,
     val senha: Int
 
-) {
+) : Funcionario(nome = nome, cpf = cpf, salario = salario) {
 
-    fun bonificao(): Double {
-        return this.salario * 0.4
-    }
+    override val bonificao: Double
+        get() {
+            return this.salario * 0.4
+        }
 
     fun autentica(senha: Int): Boolean {
         if (this.senha == senha) {
