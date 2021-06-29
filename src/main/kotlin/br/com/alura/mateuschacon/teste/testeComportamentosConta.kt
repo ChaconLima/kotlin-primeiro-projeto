@@ -1,5 +1,7 @@
 package br.com.alura.mateuschacon.teste
 
+import br.com.alura.mateuschacon.exception.FalhaAutenticacaoException
+import br.com.alura.mateuschacon.exception.SaldoInsuficienteException
 import br.com.alura.mateuschacon.modelos.Cliente
 import br.com.alura.mateuschacon.modelos.Conta
 import br.com.alura.mateuschacon.modelos.ContaCorrente
@@ -9,7 +11,7 @@ fun testeComportamentosConta() {
 
     println("-------------------------------")
     val alex = Cliente(nome = "Alex", cpf = "123", senha = 1234)
-    val contaAlex = ContaPoupanca(titular =alex, numeroConta = 1000)
+    val contaAlex = ContaPoupanca(titular = alex, numeroConta = 1000)
     println(contaAlex.titular.nome)
     println(contaAlex.numeroConta)
     println(contaAlex.saldo)
@@ -27,7 +29,7 @@ fun testeComportamentosConta() {
     println("contaAlex: ${contaAlex.saldo}")
 
     println("depositando na conta do Fran")
-    contaFran.deposita(3000.0)
+    contaFran.deposita(1800.0)
     println("contaFran: ${contaFran.saldo}")
 
     println("-------------------------------")
@@ -44,11 +46,25 @@ fun testeComportamentosConta() {
 
     println("Transferencia da Conta da Fran para o Alex")
 
-    if (contaFran.transfere(valor = 1800.0, destino = contaAlex)) {
+    try {
+        contaFran.transfere(valor = 350.0, destino = contaAlex, senha = 1234)
         println("Transferencia sucedida")
-    } else {
+    } catch (e: SaldoInsuficienteException) {
         println("Falha na transferencia")
+        println("saldo é insuficiente")
+        e.printStackTrace()
+    } catch (e: FalhaAutenticacaoException) {
+        println("Falha na transferencia")
+        println("Error na autenticação")
+        e.printStackTrace()
+    } catch (e: Exception) {
+        e.printStackTrace()
     }
+
+
+
+
+
     println("contaAlex: ${contaAlex.saldo}")
     println("contaFran: ${contaFran.saldo}")
 
