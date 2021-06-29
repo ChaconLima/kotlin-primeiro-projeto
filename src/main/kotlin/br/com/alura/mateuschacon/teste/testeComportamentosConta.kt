@@ -1,6 +1,7 @@
 package br.com.alura.mateuschacon.teste
 
 import br.com.alura.mateuschacon.modelos.Cliente
+import br.com.alura.mateuschacon.modelos.Conta
 import br.com.alura.mateuschacon.modelos.ContaCorrente
 import br.com.alura.mateuschacon.modelos.ContaPoupanca
 
@@ -50,4 +51,6 @@ fun testeComportamentosConta() {
     }
     println("contaAlex: ${contaAlex.saldo}")
     println("contaFran: ${contaFran.saldo}")
+
+    println(Conta.total)
 }
